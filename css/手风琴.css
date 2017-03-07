@@ -1,0 +1,17 @@
+#accordion ul{width:1200px; height:180px;  border:1px solid #000; position: relative; overflow:hidden;}
+#accordion ul li{width: 1200px; height: 180px; position:absolute; left:0; top:0;}
+#accordion ul li:hover{
+    cursor: pointer;
+}
+#accordion ul li:nth-child(1){
+ background:url("../img/web-tu.jpg") no-repeat;
+}
+#accordion ul li:nth-child(2){
+    background:url("../img/web-tu2.jpg") no-repeat;
+}
+#accordion ul li:nth-child(3){
+    background:url("../img/web-tu3.jpg") no-repeat;
+}
+#accordion ul li:nth-child(4){
+    background:url("../img/web-tu4.jpg") no-repeat;
+}

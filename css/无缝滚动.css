@@ -1,0 +1,7 @@
+#box-cat {position: relative; width:946px; height:170px; overflow: hidden; left:250px;}
+#box-cat  ul{position:absolute; left:0; top:0;}
+#box-cat ul li{width:150px; height:150px; margin:10px 10px; float:left;}
+#box-cat ul li img{width:150px; height:150px;}
+#box-cat a{width:946px; height:170px; position:absolute; top:0; opacity:0; background: #000; z-index:999;}
+ #left{left:0;}
+ #right{right:0;}

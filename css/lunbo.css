@@ -1,0 +1,114 @@
+
+div {
+    text-align: left;
+ /*   overflow: hidden;*/  /*这行会影响web模块小圆圈会隐藏*/
+}
+
+img {
+    border:0px;
+}
+.picshow {
+    border:1px solid #d9e0ea ;
+    margin: 0px auto;
+    width: 958px;
+    height: 620px;
+}
+
+#picarea {
+    margin: 0px auto;
+    width: 958px;
+    background: #fff;
+    height: 620px;
+}
+#bigpicarea {
+    position: relative;
+    margin: 0px auto;
+    width: 774px;
+    height: 482px;
+    overflow: hidden
+}
+.image {
+    text-align: center
+}
+.image img {
+    border:1px solid #ececec  ;
+}
+#bigpicarea .word {
+    text-align: center;
+    height: 50px;
+    color: #333;
+}
+#bigpicarea .word h3 {
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    color: #333;
+    font-size: 14px
+}
+#bigpicarea .ui-els-hide {
+    display: none
+}
+#thumbs {
+    list-style-type: none;
+    margin: 0px auto;
+    width: 830px;
+    height: 110px
+}
+* html #thumbs {
+    height: 100%
+}
+#thumbs li {
+    margin: 0px 7px;
+    width: 90px;
+    display: inline;
+    float: left;
+    height: 60px
+}
+#thumbs ul {
+    margin-top: 3px
+}
+#thumbs li.last_img {
+    margin-right: 4px
+}
+#thumbs li.first {
+    margin: 25px 10px 0px 15px;
+    width: 9px;
+    height: 16px;
+    cursor: pointer
+}
+#thumbs li.last {
+    margin: 25px 10px 0px 15px; width: 9px; height: 16px; cursor: pointer
+}
+#thumbs li a {
+    border: #fff 2px solid; width: 90px; display: block; font-size: 0px;
+}
+#thumbs li a:hover {
+    border: #000 2px solid;
+}
+#thumbs li a.current {
+    border: #f8ae0f 2px solid;
+}
+.bigbtnprev {
+    z-index: 100; position: absolute; width: 35px; height: 51px; top: 186px; cursor: pointer; left: 30px
+}
+.bigbtnnext {
+    z-index: 100; position: absolute; width: 35px; height: 51px; top: 186px; cursor: pointer; right: 30px
+}
+#big_play_prev {
+    background-image: url(../images/leftbig.png); width: 35px; display: block; height: 51px;
+}
+#big_play_next {
+    background-image: url(../images/rightbig.png); width: 35px; display: block; height: 51px;
+}
+#smallpicarea {
+    margin: 0px auto; width: 789px;  padding-top: 20px
+}
+
+.wrap{
+   position:absolute;
+    z-index:1000;
+    left:50%;
+    top:50%;
+    margin-left:-479px;
+    margin-top:-280px;
+}

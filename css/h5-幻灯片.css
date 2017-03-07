@@ -1,0 +1,10 @@
+#slide-box{width:360px; height:218px; position:relative; overflow: hidden; border-top:2px solid blue;}
+#slide-box ul{width:1440px; position:absolute; left:0; top:0;}
+#slide-box ul li{width: 360px; height:218px;float:left;}
+#slide-box ol {position:absolute; width: 400px; left:50%; margin-left:-177px; bottom:0;}
+#slide-box ol li{width:30px; height:6px; background: #ccc; float:left; margin:10px; position:relative;}
+#slide-box ol li span{width:30px; height:6px; background: #fff; position:absolute; left:0; top:0;}
+#slide-box ul li:nth-child(1){ background:url("../img/h5-tit.jpg") no-repeat;}
+#slide-box ul li:nth-child(2){background:url("../img/h5-tit2.jpg") no-repeat;}
+#slide-box ul li:nth-child(3){background:url("../img/h5-tit3.jpg") no-repeat;}
+#slide-box ul li:nth-child(4){background:url("../img/h5-tit4.jpg") no-repeat;}

@@ -1,0 +1,59 @@
+/*这是所有的公共样式*/
+*{
+    padding:0; margin:0;
+    box-sizing :border-box; /*假如您需要并排放置两个带边框的框,浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中*/
+
+}
+
+:after, :before{/*给所有的伪类加border-box*/
+    box-sizing :border-box;
+}
+
+::selection {/*::selection选择器匹配元素中被用户选中或处于高亮状态的部分。 text-shadow文字阴影*/
+    color: #fff;
+    text-shadow:none;
+    background:#222;
+}
+
+body{
+    font-family: Arial, 微软雅黑, "Microsoft yahei", "Hiragino Sans GB", "冬青黑体简体中文 w3", "Microsoft Yahei", "Hiragino Sans GB", "冬青黑体简体中文 w3", STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
+    font-size:14px;
+    line-height:20px;
+    color:#333;
+    background:#fff;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+    color:#000;
+}
+
+b,strong {
+    font-weight:normal;
+}
+
+i,em{
+    font-style:normal;
+}
+img{
+    vertical-align:top;
+}
+
+/*调整屏幕自适应*/
+@media(max-width:1200px){/*若浏览器小于1200px*/
+
+}
+@media(max-width:800px){/*若浏览器小于800px*/
+
+}
+@media(max-width:400px){/*若浏览器小于400px*/
+
+}
+/*调整屏幕自适应end*/

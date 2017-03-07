@@ -1,0 +1,943 @@
+
+/* html标签设置宽高, 这里的100%表示跟随窗口的大小而改变， 文档中任何没有设置宽高的元素都跟随html的宽高 */
+body, html {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+/*navbar的样式*/
+.navbar {
+    width: 100%;/*所有的元素都设置宽度为100%*/
+    border-bottom: 1px solid #cccccc;
+}
+
+.navbar-fixed {/*让navbar固定在顶部*/
+    position: fixed;/*固定定位, 脱离文档流*/
+    right: 0;
+    left: 0;
+    z-index:9999;/*设置层级为最高*/
+}
+
+.nav-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 50px;/*50px效果最好看*/
+    line-height: 50px;
+}
+
+.navbar-right, .nav-container {
+    overflow: hidden;
+}
+
+.nav-list {
+    float: right;
+}
+
+.nav-header, .navbar-right li {
+    float: left;
+}
+
+.navbar-right li a {
+    padding: 15px;
+    font-weight: bold;
+}
+
+.navbar-right li a:hover {
+    color: #ccc;
+}
+
+/*header的样式*/
+header {
+    width: 100%;/*所有的元素都设置宽度为100%*/
+    text-align: center;
+    background: url(../img/1.jpg) no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+    z-index: 1200;
+}
+
+@media (min-width: 768px) {
+    /*若最小宽是768px，那么让header的高度是100%；*/
+    header {
+        min-height: 100%;
+    }
+}
+/*header中右边的联系方式*/
+.header_rmenu{
+    position:fixed;
+    right:0;
+    bottom:16px;
+    z-index:998;
+}
+.header-rmenu-qq{
+    background:#83abbb;
+    padding:14px;
+}
+.header-rmenu-wechat{
+    background:#a3b5bb;
+    padding:14px;
+}
+.header-rmenu-phone{
+    background:#00b38d;
+    padding:14px;
+}
+.header-rmenu-back{
+    background:#83abbb;
+}
+/*header遮罩层上的效果*/
+#header-trans{
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    position:fixed;
+    background:#000;
+    opacity: 0.7;
+    z-index: 1001;
+}
+.header-trans-img{
+    position: fixed;
+    z-index:1004;
+    right:10px;
+    top:60px;
+    cursor: pointer;
+}
+/*!*遮罩层烟花效果，，烟花先暂时不写，因为canvas不能加事件*!
+canvas {
+    cursor: crosshair;
+    display: block;
+    position:fixed;
+    z-index:1005;
+}*/
+/*轮播图层级*/
+#lunbo-none{
+    z-index:1003;
+}
+.head-content{
+    position: fixed;
+    z-index:1004;
+}
+/*html模块*/
+
+.primary-html{
+
+   width:1200px;
+    margin:0 auto;
+
+}
+.primary-html-container-top{
+    height:132px;
+    border-left:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+}
+/*html模块左边的列表*/
+.primary-html-container{
+    overflow: hidden;
+}
+.primary-html-container-one{
+    float: left;
+}
+
+/*html模块右边的列表*/
+.primary-html-container-two{
+    float: right;
+    padding-top:36px;
+   /* border:1px solid blue;*/
+}
+.primary-html-container-two-list{
+    overflow: hidden;
+
+}
+.primary-html-container-two-list li{
+    float: left;
+   width:240px;
+    height:60px;
+    line-height:60px;
+    text-align: center;
+   /* border:1px solid red;*/
+
+}
+/*图标*/
+
+.base-icon{margin-top:14px; margin-right:8px}
+/*右边的60px高度的线*/
+.right-border{
+    border-right:1px solid #dddddd;
+}
+/*html下面的主要内容*/
+.primary-html-container-bot>div{
+}
+/*中间宽度自动*/
+.html-and{
+    width:auto;
+    overflow: hidden;
+    
+}
+.primary-html-container-bot{
+    margin-top:30px;
+    overflow: hidden;
+    padding-bottom:40px;
+}
+.primary-html-container-bot-le{
+    width:340px;
+    border-top:2px solid blue;
+    float: left;
+}
+.primary-html-container-bot-mid{
+    width:360px;
+    border-top:2px solid #00b38d;
+    margin:0 20px;
+    float: left;
+}
+.primary-html-container-bot-ri{
+    width:260px;
+    border-top:2px solid forestgreen;
+    float: left;
+}
+.primary-html-container-bot-ri2{
+    width:200px;
+    padding-left:20px;
+    float: right;
+    position: relative;
+}
+.primary-html-container-bot-ri2-line{
+    width:180px;
+    height:2px;
+    background:#000;
+    position: absolute;
+    right:0;
+    left:0;
+    margin-left:20px;
+}
+/*左边的选项卡*/
+.primary-html-container-bot-le-list{
+    overflow: hidden;
+    margin-bottom:14px;
+}
+.primary-html-container-bot-le-list li{
+    float: left;
+    width:68px;
+    height:40px;
+    background: #f5f5f5;
+    text-align: center;
+    line-height:40px;
+    border-bottom:1px solid #d4d4d4;
+    border-right:1px solid #d4d4d4;
+
+}
+.primary-html-container-bot-le-list li a{
+    font-size:14px;
+    color:#626669;
+}
+/*去除待续右边的border*/
+.primary-html-container-bot-le-list li.wait-border-right{
+    border-right:none;
+}
+/*左边选项卡对应的下面的图*/
+.primary-html-container-bot-le-list-img{
+    height:374px;
+}
+.primary-html-container-bot-le-list-img div>img{
+    vertical-align: top;
+}
+/*primary-html-container-bot-mid-tit标题*/
+.primary-html-container-bot-mid-tit{
+    height:37px;
+    line-height:37px;
+    margin-bottom:14px;
+    margin-left:10px;
+}
+.primary-html-container-bot-mid-tit img{
+    margin-top:6px;
+}
+#remove_dis{
+    line-height:14px;
+}
+.primary-html-container-bot-mid-list li{
+    margin-left:20px;
+    line-height:32px;
+}
+.primary-html-container-bot-le-list .primary-html-container-bot-le-list-fill{
+    background:#f5f5f5;
+    width:124px;
+    border-right:0px;
+}
+/*小的选项卡*/
+.primary-html-container-bot-ri-con span{
+    display: inline-block;
+    border:1px solid #bebebe;
+    width:26px;
+    height:28px;
+    text-align: center;
+    line-height:28px;
+}
+.primary-html-container-bot-ri-con .primary-html-container-bot-ri-con-choice{
+    border-right:0px;
+}
+.primary-html-container-bot-ri-con{
+    overflow:hidden;
+    margin-bottom:10px;
+
+}
+.primary-html-container-bot-ri-con a{
+    float: left;
+    line-height:28px;
+}
+.primary-html-container-bot-ri-con-choice-box{
+    width:52px;
+    height:28px;
+    float: right;
+}
+.primary-html-container-bot-ri-con-lists{
+    margin-top:10px;
+    overflow: hidden;
+}
+.primary-html-container-bot-ri-con-one, .primary-html-container-bot-ri-con-two{
+    float: left;
+}
+.primary-html-container-bot-ri-con-two{
+    margin-top:10px;
+    margin-left:9px;
+    width:120px;
+    height:108px;
+    font-size:12px;
+    line-height:24px;
+}
+/*被重复的那部分内容距上有20px*/
+.repeat-top{
+    border-top:1px solid #cbcbcb;
+    margin-top:20px;
+    padding-top:10px;
+}
+/*大的选项卡下面的列表*/
+.tab_lists_tit{
+    font-size:14px;
+    font-weight:bold;
+    line-height:30px;
+    padding-left:16px;
+}
+.tab_lists_line_gray{
+    position: absolute;
+    width:340px;
+    height:2px;
+    background-color:#7e7e7e;
+}
+.tab_lists_line_blue{
+    position: absolute;
+    width:80px;
+    height:2px;
+    background-color:#1080c6;
+}
+.tab_lists{
+    padding-left:10px;
+}
+.tab_lists li{
+    line-height:34px;
+}
+/*右边最小的部分*/
+.primary-html-container-bot-ri2-tit{
+    font-size:14px;
+    line-height:39px;
+    padding-left:10px;
+}
+.primary-html-container-bot-ri2-con{
+    overflow: hidden;
+    margin-bottom:14px;
+}
+.primary-html-container-bot-ri2-tit{
+    float: left;
+    color:#207adb;
+}
+.primary-html-container-bot-ri2-tit-right{
+    float: right;
+    background:url("../img/换一换.png") no-repeat left center;
+    background-size:12px 12px;
+    line-height:39px;
+    padding-left:18px;
+    padding-right:8px;
+}
+/*换一换下面的标签*/
+.primary-html-container-bot-ri2-con2{
+    margin-left:19px;
+
+}
+.primary-html-container-bot-ri2-con2 li{
+    float: left;
+    line-height:22px;
+    margin-right:8px;
+
+}
+.primary-html-container-bot-ri2-con2 li .except_bottom{
+    margin-bottom:0px;
+}
+.primary-html-container-bot-ri2-con2 li a{
+    display: inline-block;
+    padding-left:8px;
+    padding-right:8px;
+    background:#d5e8fd;
+    border-radius:4px;
+    margin-bottom:16px;
+}
+.primary-html-container-bot-ri2-con2 li a:hover{
+    background:#74b3f7;
+}
+/*html模块end*/
+/*js模块*/
+.js-module{
+    background:#eeeff1;
+    padding-bottom:40px;
+}
+.js-module-con{
+   width:1200px;
+    margin:0 auto;
+}
+.js-module-top{
+    padding-top:34px;
+    position: relative;
+}
+.js-logo{
+    position: absolute;
+    top:44px;
+}
+.js-module-lists{
+    margin-top:8px;
+    overflow: hidden;
+}
+
+.js-module-container1{
+    float: left;
+    width:187px;
+
+    margin-right:15px;
+}
+.js-module-one{
+    background:#fff;
+}
+#remove-js-dis{
+    margin-right:0px;
+}
+.js-module-one-tit-img{
+    margin-top:10px;
+}
+.js-module-one-tit{
+
+    line-height:46px;
+    border-bottom:2px solid #58d172;
+    padding-left:15px;
+    margin-bottom:13px;
+}
+.js-module-one span{
+    padding-left:12px;
+    font-size:20px;
+
+}
+.js-module-one-discription{
+    overflow: hidden;
+}
+.js-module-one-discription li{
+    float: left;
+    line-height:30px;
+}
+.js-module-one-discription-dis{
+    padding:0 18px;
+}
+/*虚线*/
+.js-module-one-discription-line{
+    width:158px;
+    height:1px;
+    border:1px dashed #dcdddf;
+    margin-left:15px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.js-module-one .js-module-line-remove-dis{
+    margin-bottom:0px;
+    border:1px solid #fff;
+}
+/*虚线下面的列表*/
+.js-module-one-discription2{
+    margin-left:15px;
+    padding-bottom:20px;
+}
+.js-module-one-discription2 li{
+    line-height:29px;
+    font-size:14px;
+}
+.js-module-one-discription2 li a{
+    color:#999999;
+}
+#js-module-one-discription2-point1{
+    width:3px;
+    height:3px;
+    background-color:#58d172;
+   display: inline-block;
+    margin-bottom:4px;
+    margin-right:5px;
+
+}
+/*瀑布流加margin-top*/
+.js-module-repeat{
+    margin-top:14px;
+}
+/*修改第四列最后的边距*/
+.js-module-repeat-modify li{
+    line-height:24px;
+}
+.js-module-container1 .only-hei{
+    padding-bottom:18px;
+}
+/*js模块结束*/
+/*前端模板模块*/
+.web-frame-mudule-con{
+   width:1200px;
+    margin:0 auto;
+}
+.web-frame-mudule{
+    padding-bottom:40px;
+}
+.web-frame-mudule-con-top-img img{
+    border:1px solid #dfdfd1;
+}
+.web-frame-mudule-con-top-line{
+    width:50px;
+    height:5px;
+    background:#222222;
+    margin-top:12px;
+    margin-right:30px;
+    margin-left:30px;
+}
+.web-frame-mudule-con-top-line2{
+    width:365px;
+    height:5px;
+    background:#222222;
+    margin-top:12px;
+    margin-left:25px;
+}
+.web-frame-mudule-con-top{
+    overflow: hidden;
+}
+.web-frame-mudule-con-top-img, .web-frame-mudule-con-list, .web-frame-mudule-con-list-tit{
+    float: left;
+}
+.web-frame-mudule-con-list{
+    margin-bottom:12px;
+    overflow: hidden;
+}
+.web-frame-mudule-con-list li{
+    float: left;
+    line-height:30px;
+}
+.web-frame-mudule-con-top .web-frame-mudule-con-list-tit-eclips{
+    margin-left:0px;
+}
+.web-frame-mudule-con-list-tit{
+    width:172px;
+    height:110px;
+    background:url("../img/slash.png") no-repeat right center;
+    padding-left:60px;
+    padding-top:26px;
+    float: left;
+    position:relative;
+    margin-top:5px;
+}
+.web-frame-mudule-con-list-tit li{
+    width:100px;
+    height:100px;
+    position:absolute;
+    left:20px;
+    top:-5px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.web-frame-mudule-con-list-tit li:hover{
+    border-radius:50%;
+    background:dodgerblue;
+}
+.web-frame-mudule-con-list-tit-bg{
+    background-image: none;
+}
+#web-frame-mudule-con-list-tit-con{
+    overflow: hidden;
+    border:1px solid #fff;
+    padding-left:26px;
+}
+.web-frame-mudule-con-bottom-tit{
+
+}
+.web-frame-mudule-con-bottom-tit-line{
+    position: relative;
+    width:1200px;
+    height:2px;
+    background:#000;
+}
+.small-circle{
+    display: inline-block;
+}
+
+.chat-middle{
+    width:16px;
+    height:15px;
+    line-height:15px;
+    background:url("../img/精灵图.png") no-repeat;
+    margin-right:152px;
+    display: inline-block;
+    position: relative;
+    left:235px;
+    top:-10px;
+    overflow: hidden;
+}
+.chat-pos{
+     background-position: 0 -250px;
+    margin-top:2px;
+ }
+/*鼠标移入小圆圈变色，用js代替*/
+.web-frame-mudule-con:hover .chat-pos{
+    background-position: 0 -316px;
+}
+.date{
+    background:url("../img/homev2_icos.png") no-repeat 0 -202px;
+    color:#fff;
+    padding-left:3px;
+    width:112px;
+    padding-top:4px;
+    height:23px;
+    float: left;
+    position: relative;
+    top:1px;
+
+}
+.web-frame-mudule-con-bottom{
+    height:50px;
+    background:#efefef;
+}
+.date span{
+    margin:9px 0 0 10px;
+}
+.date-lis{
+    float: left;
+}
+.web-frame-mudule-con-bottom-tit{
+    float: left;
+}
+.web-frame-mudule-con-bottom ul{
+/*    margin-left:53px;*/
+}
+.web-frame-mudule-con-bottom ul li{
+    font-size: 12px;
+    color: #cc9e96;
+    text-align: center;
+    float: left;
+    margin-top: -7px;
+    display: inline;
+    margin-left:110px;
+}
+/*选项卡内容*/
+.share-content{
+    padding:20px;
+    border:1px solid #E2E2E2;
+    background: rgba(255,255,255,.7);
+    height:292px;
+}
+.left-wrap .list a{
+    float: left;
+    height:20px;
+    line-height:20px;
+    border:1px solid #e6e6e6;
+    padding:0 10px;
+    margin:0 10px 12px 0;
+    white-space:nowrap; /* 不换行*/
+    color: #888;
+    border-radius:30px;
+}
+.nav-content .left-wrap{
+    float: left;
+    width:100%;
+    padding:30px 44px;
+    margin-top:-24px;
+    overflow: hidden;
+}
+.left-wrap-list{
+    height:100%;
+    overflow: hidden;
+}
+.left-wrap .list{
+    float: left;
+    width:278px;
+
+}
+.hot-none{
+    padding:10px 40px 0;
+
+}
+.list-none{
+    height:112px;
+    overflow: hidden;
+    padding:8px 40px 0 50px;
+
+}
+.list-none .list-top{
+    background:url("../img/dot1.png") 0 bottom repeat-x;
+    width:194px;
+    height:27px;
+
+}
+.skill-img{
+    background:url("../img/技能评价.png") no-repeat;
+    float: left;
+    width:30px;
+    height:30px;
+    position: relative;
+    overflow: hidden;
+}
+.left-wrap .list-top a{
+    padding:2px 7px;
+    border:none;
+
+}
+.left-wrap .hot{
+    width:235px;
+}
+.left-wrap .list h2{
+    font-size:14px;
+    display: inline-block;
+    float: left;
+    margin-right:20px;
+    margin-left:6px;
+    font-weight:400;
+}
+.left-wrap .list-none ul{
+    width:209px;
+    padding-top:10px;
+    float: left;
+    margin-top:-5px;
+    margin-left:-7px;
+}
+.left-wrap .list-none ul li a{
+    border:none;
+}
+/*h5模块*/
+.h5-primary{
+    background:#eeeff1;
+    padding-bottom:40px;
+}
+.h5-intro{
+    height:100%;
+    background:#fff;
+}
+.h5-module{
+width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+    background:#fff;
+}
+.h5-le{
+    float: left;
+    width:360px;
+}
+.h5-con{
+    overflow: hidden;
+}
+.h5-tit{
+    width:110px;
+    height:34px;
+}
+.h5-tit img{
+
+}
+.h5-con ul{
+    width:180px;
+    height:90px;
+    float: left;
+    border-right:1px solid #e5e5e5;
+    padding-top:10px;
+    background:#fff;
+}
+.h5-con ul li{
+    margin-left:14px;
+    float: left;
+    color:#666;
+    width:73px;
+    height:30px;
+    line-height:30px;
+    overflow: hidden;
+}
+/*h5里面的图标*/
+.h5-icon{
+    overflow: hidden;
+}
+.h5-icon ul{
+    width:180px;
+    height:223px;
+    float: left;
+    border-right:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    padding-top:33px;
+    background:#fff;
+}
+.h5-icon ul li{
+    float: left;
+    margin:0 0 30px 6px;
+}
+.h5-icon img{
+    width:80px;
+    height:32px;
+    vertical-align: middle;
+}
+.h5-ri{
+    float:left;
+    width:840px;
+    height:576px;
+}
+.h5-tab{
+    border-bottom:2px solid blue;
+    height:36px;
+    position: relative;
+    overflow: hidden;
+}
+.h5-tab ul{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.h5-tab ul li{
+    float: left;
+    line-height:32px;
+    height:32px;
+    border:2px solid #eeeff1;
+    border-bottom:0;
+}
+.h5-tab ul li a{
+    padding-left:20px;
+    padding-right:20px;
+    border-right:1px solid #eeeff1;
+}
+.h5-tab ul .hover{
+    height:34px;
+    background: #ffffff;
+    bottom:0;
+}
+/*选项卡里的内容*/
+.h5-intro ul{
+    background:red;
+}
+.h5-intro li{
+    width:200px;
+    float: left;
+    text-align: center;
+    margin:5px 0px 4px 10px;
+}
+.h5-intro li a{
+    color:#666;
+}
+.h5-intro li a img{
+    width:200px;
+    height:200px;
+
+}
+.h5-intro li p{
+    width:200px;
+    height:27px;
+    line-height:27px;
+    color: #4c4c4c;
+    text-align: center;
+
+}
+.h5-mobile-dev{
+    margin-top:26px;
+    float: left;
+/*    border:1px solid red;*/
+    width:100%;
+    overflow: hidden;
+}
+.h5-mobile-icon{
+    float: left;
+    width:20px;
+    height:27px;
+    margin-left:12px;
+    margin-right:8px;
+    background:url("../img/h5-mo-dev.png") no-repeat;
+}
+.h5-mobile-show{
+    font-size:24px;
+    color:#272727;
+}
+.templete-case{
+    overflow: hidden;
+}
+
+.h5-mobile-des  a{
+    font-size:18px;
+    display: inline-block;
+    width:397px;
+    text-align: center;
+}
+    /*联系我*/
+#contant{
+
+}
+.contant-con{
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.my-des{
+    float: left;
+    margin-left:200px;
+    overflow: hidden;
+}
+.my-map{
+    width:334px;
+    height:374px;
+    border:1px solid red;
+    border-radius:5px;
+    float: left;
+}
+.my-resume{
+    padding-top:25px;
+    font-size:14px;
+    line-height:24px;
+    float: left;
+}
+.resume-tit{
+    line-height:26px;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:24px;
+    color:#6f95c8;
+}
+
+.my-computer{
+    background-image:url("../img/h5-tit2.jpg");
+    background-repeat:no-repeat;
+    width:300px;
+    height:300px;
+    float: right;
+    margin-left:240px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

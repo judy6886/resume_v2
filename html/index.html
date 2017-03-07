@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--强制按照最新版本执行-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--initial-scale=1 初始缩放程度最后以1:1展示出来 device-width是电脑屏幕的宽-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <!--自适应调整-->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+
+    <title>Home</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/lunbo.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/h5-幻灯片.css"/>
+    <link rel="stylesheet" href="../css/立方体旋转.css"/>
+    <link rel="stylesheet" href="../css/无缝滚动.css"/>
+    <link rel="stylesheet" href="../css/手风琴.css"/>
+</head>
+
+<body>
+
+
+<!--导航-->
+<nav class="navbar navbar-fixed">
+    <div class="nav-container">
+        <div class="nav-header">我的头像(图)</div>
+        <div class="nav-list">
+            <ul class="navbar-right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#primary-link">Base</a></li>
+                <li><a href="#skill-link">Skill</a></li>
+                <li><a href="#case-link">Case</a></li>
+                <li><a href="#frame-link">Frame</a></li>
+                <li><a href="#contant-link">Contant</a></li>
+            </ul>
+        </div>
+    </div>
+</nav><!--end nav-->
+
+<!--遮罩层烟花效果js在底部-->
+<!--遮罩层上的效果-->
+
+
+
+<!--头部-->
+<header id="home">
+<!--遮罩和轮播先注释-->
+   <!-- <div id="header-trans"></div>
+    <img src="../img/off.png" alt="" class="header-trans-img" width="40px" height="40px" id="click"/>
+    &lt;!&ndash;烟花先暂时不写，因为canvas不能加事件&ndash;&gt;
+    &lt;!&ndash;&lt;!&ndash;烟花效果画布&ndash;&gt;
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>&ndash;&gt;
+
+    &lt;!&ndash;轮播图&ndash;&gt;
+    &lt;!&ndash;遮罩层上的轮播图&ndash;&gt;
+    <div style="height: 560px; " class="wrap picshow" id="lunbo-none">
+        &lt;!&ndash;大图轮换区&ndash;&gt;
+        <div id="picarea">
+            <div style="margin: 0px auto; width: 774px; height: 436px; overflow: hidden">
+                <div style="margin: 0px auto; width: 774px; height: 436px; overflow: hidden" id="bigpicarea">
+                    <p class="bigbtnprev"><span id="big_play_prev"></span></p>
+                    <div id="image_xixi-01" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/one.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-02" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/two.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-03" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/three.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-04" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/four.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-05" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/five.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-06" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/six.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <div id="image_xixi-07" class="image">
+                        <a href="" target="_blank">
+                            <img alt="" src="../img/seven.jpg" width="772" height="434"></a>
+                        <div class="word">
+                            <h3></h3>
+                        </div>
+                    </div>
+                    <p class="bigbtnnext"><span id="big_play_next"></span></p>
+                </div>
+            </div>
+            <div id="smallpicarea">
+                <div id="thumbs">
+                    <ul>
+                        <li class="first btnprev">
+                            <img id="play_prev" src="images/left.png"></li>
+                        <li class="slideshowitem"><a id="thumb_xixi-01" href="#">
+                            <img src="../img/one.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="slideshowitem"><a id="thumb_xixi-02" href="#">
+                            <img src="../img/two.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="slideshowitem"><a id="thumb_xixi-03" href="#">
+                            <img src="../img/three.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="slideshowitem"><a id="thumb_xixi-04" href="#">
+                            <img src="../img/four.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="slideshowitem"><a id="thumb_xixi-05" href="#">
+                            <img src="../img/five.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="slideshowitem"><a id="thumb_xixi-06" href="#">
+                            <img src="../img/six.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="last_img slideshowitem">
+                            <a id="thumb_xixi-07" href="#">
+                                <img src="../img/seven.jpg" width="90" height="60"></a>
+                        </li>
+                        <li class="last btnnext">
+                            <img id="play_next" src="images/right.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <div class="head-content">
+        <div class="head-content-inner">
+            <!--qq,微信，电话，联系方式-->
+            <div class="header_rmenu">
+                <div class="header-rmenu-qq"><img src="../img/myqq.png" alt=""/></div>
+                <div class="header-rmenu-wechat"><img src="../img/mywechat.png" alt=""/></div>
+                <div class="header-rmenu-phone"><img src="../img/myphone.png" alt=""/></div>
+                <div class="header-rmenu-back">
+                    <a onclick="pageScroll()" style="border: 1px solid red; display: inline-block;">
+                        <img src="../img/r_top.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section class="primary-html" id="primary-link">
+    <div class="primary-html-container">
+        <!--html头部选项卡-->
+        <ul class="primary-html-container-top">
+            <li class="primary-html-container-one"><a href="javascript:;"><img src="../img/html.jpg" alt="" width="234" height="132"/></a> </li>
+            <li class="primary-html-container-two">
+                <ul class="primary-html-container-two-list">
+                    <a href="javascript:;"><li class="right-border" class="icons"><img src="../img/基础.png" alt="" width="30" height="30" class="base-icon"/>基础知识</li></a>
+                    <a href="javascript:;"><li class="right-border" class="icons"><img src="../img/知识.png" alt="" width="35" height="35" class="base-icon"/>重点知识</li></a>
+                    <a href="javascript:;"><li class="right-border" class="icons"><img src="../img/案例.png" alt="" width="35" height="35" class="base-icon"/>经典案例</li></a>
+                    <a href="javascript:;"><li  class="icons"><img src="../img/注意.png" alt="" width="30" height="30" class="base-icon"/>注意事项</li></a>
+                    <!--<a href="javascript:;"><li class="right-border" class="icons"><img src="../img/基础.png" alt="" width="30" height="30" class="base-icon"/>未完待续</li></a>-->
+
+
+                </ul>
+            </li>
+        </ul>
+        <!--html下面主要内容-->
+        <div class="primary-html-container-bot">
+            <!--左-->
+            <div class="primary-html-container-bot-le">
+                <ul class="primary-html-container-bot-le-list">
+                    <li><a href="javascript:;">基础</a></li>
+                    <li><a href="javascript:;">重点</a></li>
+                    <li><a href="javascript:;">注意</a></li>
+                    <li><a href="javascript:;">案例</a></li>
+                    <li class="wait-border-right"><a href="javascript:;">待续</a></li>
+                </ul>
+                <!--左边选项卡的图片-->
+                <section class="primary-html-container-bot-le-list-img">
+                    <!-- <img src="../img/code1.jpg"  width="340" height="374"/>
+                      <img src="../img/code2.jpg" width="340" height="374"/>
+                      <img src="../img/code3.jpg" width="340" height="374"/>
+                     <img src="../img/code4.jpg" width="340" height="374"/>-->
+                    <img src="../img/code5.jpg"  width="340" height="374"/>
+                </section>
+                <!--选项卡下面的小列表-->
+                <p class="tab_lists_tit">我的推荐</p>
+                <span class="tab_lists_line_gray"></span>
+                <span class="tab_lists_line_blue"></span>
+                <ul class="tab_lists">
+                    <li><a href="javascript:;">【呼呼呼】哈哈哈哈哈哈</a> </li>
+                </ul>
+            </div>
+            <!--右2-->
+            <div class="primary-html-container-bot-ri2">
+                <span class="primary-html-container-bot-ri2-line"></span>
+                <div class="primary-html-container-bot-ri2-con">
+                    <span class="primary-html-container-bot-ri2-tit">大家都在看</span>
+                    <a href="javascript:;" class="primary-html-container-bot-ri2-tit-right">换一换</a>
+                </div>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;">ddddd</a></li>
+                    <li><a href="javascript:;">我我我我我</a></li>
+                </ul>
+                <ul class="primary-html-container-bot-ri2-con2">
+                    <li><a href="javascript:;" class="except_bottom">ddddd</a></li>
+                    <li><a href="javascript:;" class="except_bottom">我我我我我</a></li>
+                </ul>
+
+
+            </div>
+            <!--中-->
+            <div class="html-and">
+                <div class="primary-html-container-bot-mid">
+                <div class="primary-html-container-bot-mid-tit">
+                    <img src="../img/tit_list.png" width="24" height="26"/> 精彩内容
+                </div>
+                <ul class="primary-html-container-bot-mid-list">
+                    <li><a href="javascript:;">1啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</a></li>
+                    <li><a href="javascript:;">2常常常常吃常常常常常常常常</a></li>
+                    <li><a href="javascript:;">3谁谁谁谁谁谁谁谁谁水水水水</a></li>
+                    <li><a href="javascript:;">4灌灌灌灌灌灌灌灌灌灌灌灌灌灌灌</a></li>
+                    <li><a href="javascript:;">5哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+                    <li><a href="javascript:;">6啧啧啧啧啧啧啧啧啧啧啧啧</a></li>
+                    <li><a href="javascript:;">7鹅鹅鹅鹅鹅鹅饿鹅鹅鹅饿鹅鹅鹅</a></li>
+                    <li><a href="javascript:;">8快快快快快快快快快快快快快</a></li>
+                    <li><a href="javascript:;">9啊水水水水水水水水水水水水</a></li>
+                    <li><a href="javascript:;">10们么么么么么么么么么么么么</a></li>
+                    <li><a href="javascript:;">11们么么么么么么么么么么么么</a></li>
+                    <li><a href="javascript:;">12们么么么么么么么么么么么么</a></li>
+                    <li><a href="javascript:;">13们么么么么么么么么么么么么</a></li>
+                    <li id="remove_dis"><a href="javascript:;">13们么么么么么么么么么么么么</a></li>
+                </ul>
+            </div>
+            <!--右-->
+                <div class="primary-html-container-bot-ri primary-html-container-bot-le">
+
+                    <ul class="primary-html-container-bot-le-list">
+                        <li><a href="javascript:;">技巧</a></li>
+                        <li><a href="javascript:;">提示</a></li>
+                        <li class="primary-html-container-bot-le-list-fill"></li>
+                    </ul>
+                <div class="primary-html-container-bot-ri-con">
+                    <a>热点文章</a>
+                    <div class="primary-html-container-bot-ri-con-choice-box">
+                        <span class="primary-html-container-bot-ri-con-choice"><</span><span>></span>
+                    </div>
+                </div>
+                <!--右边小的选项卡-->
+                <div>
+                    <a href="javascript:;">介绍介绍介绍介绍介绍介绍介绍介</a>
+                    <section class="primary-html-container-bot-ri-con-lists">
+                        <img src="../img/arc1.jpg" alt="" width="110" height="135" class="primary-html-container-bot-ri-con-one"/>
+                        <div class="primary-html-container-bot-ri-con-two">
+                            我我我哦我我我哦我我哦我哦我我你你你您男男女女男男女女哦我我我哦我我哦我哦我我
+                        </div>
+                    </section>
+                </div>
+<!--重复的内容-->
+                <div class="primary-html-container-bot-ri-con repeat-top">
+                    <a>热点文章</a>
+                    <div class="primary-html-container-bot-ri-con-choice-box">
+                        <span class="primary-html-container-bot-ri-con-choice"><</span><span>></span>
+                    </div>
+                </div>
+                <!--右边小的选项卡-->
+                <div>
+                    <a href="javascript:;">介绍介绍介绍介绍介绍介绍介绍介</a>
+                    <section class="primary-html-container-bot-ri-con-lists">
+                        <img src="../img/arc1.jpg" alt="" width="110" height="135" class="primary-html-container-bot-ri-con-one"/>
+                        <ul class="primary-html-container-bot-ri-con-two">
+                           <li><a href="javascript:;">1ttttttttttttttttt</a></li>
+                            <li><a href="javascript:;">2ttttttttttttttttt</a></li>
+                            <li><a href="javascript:;">3ttttttttttttttttt</a></li>
+                            <li><a href="javascript:;">4ttttttttttttttttt</a></li>
+                            <li><a href="javascript:;">5ttttttttttttttttt</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+        </div>
+            </div>
+
+    </div>
+</section>
+<section class="js-module">
+    <div class="js-module-con">
+        <div class="js-module-top">
+            <img src="../img/js-tu.jpg" width="234" height="150" class="js-logo"/>
+            <!--无缝滚动-->
+            <div id="box-cat">
+                <a href="javascript:;" id="left"></a>
+                <a href="javascript:;" id="right"></a>
+                <ul>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/cat/1.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <!--无缝滚动end-->
+        </div>
+        <div class="js-module-lists">
+            <!--第1份-->
+            <div class="js-module-container1">
+                <div class="js-module-one">
+                   <p class="js-module-one-tit">
+                       <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                   </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                    <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line js-module-line-remove-dis"></div>
+                </div>
+            </div>
+            <!--第2份-->
+            <div class="js-module-container1">
+                <div class="js-module-one">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--第3份-->
+            <div class="js-module-container1">
+                <div class="js-module-one">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--第4份-->
+            <div class="js-module-container1">
+                <div class="js-module-one">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat only-hei">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription js-module-repeat-modify">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!--第5份-->
+            <div class="js-module-container1">
+                <div class="js-module-one">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                <p class="js-module-one-tit">
+                    <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                </p>
+                <ul class="js-module-one-discription">
+                    <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                    <li><a href="javascript:;">我我我我</a></li>
+                </ul>
+                <ul class="js-module-one-discription">
+                    <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                    <li><a href="javascript:;">我我我我</a></li>
+                </ul>
+                <ul class="js-module-one-discription">
+                    <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                    <li><a href="javascript:;">我我我我</a></li>
+                </ul>
+                <div class="js-module-one-discription-line"></div>
+                <ul class="js-module-one-discription2">
+                    <li>
+                        <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                    </li>
+                </ul>
+            </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--第6份-->
+            <div class="js-module-container1" id="remove-js-dis">
+                <div class="js-module-one">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--一份内容中复制的瀑布流-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--又复制一份-->
+                <div class="js-module-one js-module-repeat">
+                    <p class="js-module-one-tit">
+                        <img src="../img/简介.png" width="34" height="34" alt="" class="js-module-one-tit-img"/><span>js简介</span>
+                    </p>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+                    <ul class="js-module-one-discription">
+                        <li><a href="javascript:;" class="js-module-one-discription-dis">我我我我</a></li>
+                        <li><a href="javascript:;">我我我我</a></li>
+                    </ul>
+
+                    <div class="js-module-one-discription-line"></div>
+                    <ul class="js-module-one-discription2">
+                        <li>
+                            <a href="javascript:;"><div id="js-module-one-discription2-point1"></div>呼呼呼呼呼</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="web-frame-mudule">
+    <div class="web-frame-mudule-con">
+        <div class="web-frame-mudule-con-top">
+            <p class="web-frame-mudule-con-top-img">
+                <img src="../img/web.png" alt="" width="140" height="158"/>
+            </p>
+
+            <ul class="web-frame-mudule-con-list">
+                <li class="web-frame-mudule-con-top-line"></li>
+                <li>我我我我我凤飞飞凤飞飞我我我我我凤飞飞凤飞飞凤飞飞凤飞飞凤飞飞凤飞飞凤飞飞凤飞飞</li>
+                <li class="web-frame-mudule-con-top-line2"></li>
+            </ul>
+        <div id="web-frame-mudule-con-list-tit-con">
+                        <!--标题1-->
+                        <ul class="web-frame-mudule-con-list-tit">
+                           <li>web<br/>前端</li>
+                        </ul>
+                        <!--标题2-->
+                        <ul class="web-frame-mudule-con-list-tit web-frame-mudule-con-list-tit-eclips">
+                            <li>web<br/>前端</li>
+                        </ul>
+                        <!--标题3-->
+                        <ul class="web-frame-mudule-con-list-tit web-frame-mudule-con-list-tit-eclips">
+                            <li>web<br/>前端</li>
+                        </ul>
+                        <!--标题4-->
+                        <ul class="web-frame-mudule-con-list-tit web-frame-mudule-con-list-tit-eclips">
+                            <li>web<br/>前端</li>
+                        </ul>
+                        <!--标题5-->
+                        <ul class="web-frame-mudule-con-list-tit web-frame-mudule-con-list-tit-eclips">
+                            <li>web<br/>前端</li>
+                        </ul>
+                        <!--标题6-->
+                        <ul class="web-frame-mudule-con-list-tit web-frame-mudule-con-list-tit-eclips web-frame-mudule-con-list-tit-bg">
+                            <li>web<br/>前端</li>
+                        </ul>
+                    </div>
+
+        </div>
+        <!--下面的内容-->
+        <div class="web-frame-mudule-con-bottom">
+            <div class="web-frame-mudule-con-bottom-tit">
+                <div class="web-frame-mudule-con-bottom-tit-line"></div>
+                    <p class="chat-middle chat-pos"></p>
+                    <p class="chat-middle chat-pos"></p>
+                    <p class="chat-middle chat-pos"></p>
+                    <p class="chat-middle chat-pos"></p>
+                    <p class="chat-middle chat-pos"></p>
+                    <p class="chat-middle chat-pos"></p>
+            </div>
+            <div class="date">
+                <span>2017&nbsp;/1&nbsp;/15&nbsp;</span>
+            </div>
+            <ul class="date-lis">
+                <li class="li1">jquery学习</li>
+                <li class="li1">angular学习</li>
+                <li class="li1">jquery学习</li>
+                <li class="li1">angular学习</li>
+                <li class="li1">angular学习</li>
+                <li class="li1">jquery学习</li>
+            </ul>
+        </div>
+        <!--选项卡内容-->
+        <div class="share-content">
+            <ul>
+                <li class="nav-content">
+                    <div class="left-wrap">
+                        <!--1-->
+                        <div class="list left-wrap-list hot-none hot">
+                            <h2>HOT:</h2>
+                            <a href="#"><span>angular</span></a>
+                            <a href="#"><span>vue</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+
+                        </div>
+                        <!--2-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                        <!--3-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                        <!--4-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                        <!--5-->
+                        <div class="list left-wrap-list hot-none hot">
+                            <h2>HOT:</h2>
+                            <a href="#"><span>angular</span></a>
+                            <a href="#"><span>vue</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+                            <a href="#"><span>an</span></a>
+
+                        </div>
+                        <!--6-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                        <!--7-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                        <!--8-->
+                        <div class="list list-none">
+                            <div class="list-top">
+                                <i class="skill-img"></i>
+                                <a href="#">精品</a>
+                            </div>
+                            <ul>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                                <li><a href="#">重点</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    <!--手风琴效果-->
+        <div id="accordion">
+            <ul>
+                <li> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!--手风琴效果end-->
+    </div>
+</section>
+<section class="h5-primary">
+    <section class="h5-module">
+    <div class="h5-le">
+        <h2 class="h5-tit"> <img src="../img/h5-tit4.jpg" width="110" height="34"/> </h2>
+        <!--幻灯片效果-->
+        <div id="slide-box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ol>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+            </ol>
+        </div>
+        <!--幻灯片效果end-->
+        <!--幻灯片底部的文字-->
+        <div class="h5-con">
+            <ul>
+                <li><a href="#">h5知识</a> </li>
+                <li><a href="#">h5知识</a> </li>
+                <li><a href="#">h5知识</a> </li>
+                <li><a href="#">h5知识</a> </li>
+                <li><a href="#">h5知识</a> </li>
+                <li><a href="#">h5知识</a> </li>
+            </ul>
+            <ul>
+                <li><a href="#">h5效果</a> </li>
+                <li><a href="#">h5效果</a> </li>
+                <li><a href="#">h5效果</a> </li>
+                <li><a href="#">h5效果</a> </li>
+                <li><a href="#">h5效果</a> </li>
+                <li><a href="#">h5效果</a> </li>
+            </ul>
+        </div>
+        <div class="h5-icon">
+            <ul>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+            <li><a href="#"><img src="../img/canvas.jpg"/></a> </li>
+        </ul>
+            <ul>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+                <li><a href="#"><img src="../img/mobilephone.jpg"/></a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="h5-ri">
+        <div class="h5-tab">
+            <ul>
+                <li class="hover"><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+                <li><a href="#">基础知识</a></li>
+            </ul>
+        </div>
+        <div class="h5-intro">
+            <ul>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+                <li><a href="#"><img src="../img/h5-tit3.jpg"/> <p>简介</p> <p>内容</p></a> </li>
+            </ul>
+        </div>
+    </div>
+        <!--移动端开发展示-->
+        <div class="h5-mobile-dev">
+            <div class="h5-mobile-icon"></div>
+            <div class="h5-mobile-show">移动端展示</div>
+            <div class="templete-case">
+                <!--立方体1-->
+                <ul class="cases">
+                    <li class="right"></li>
+                    <li class="left"></li>
+                    <li class="front"></li>
+                    <li class="back"></li>
+                    <li class="top"></li>
+                    <li class="bottom"></li>
+                </ul>
+
+                <!--立方体2-->
+                <ul class="cases cases2">
+                    <li class="right"></li>
+                    <li class="left"></li>
+                    <li class="front"></li>
+                    <li class="back"></li>
+                    <li class="top"></li>
+                    <li class="bottom"></li>
+                </ul>
+                <!--立方体3-->
+                <ul class="cases cases3">
+                    <li class="right"></li>
+                    <li class="left"></li>
+                    <li class="front"></li>
+                    <li class="back"></li>
+                    <li class="top"></li>
+                    <li class="bottom"></li>
+                </ul>
+            </div>
+            <div class="h5-mobile-des">
+                <a href="#">天猫移动端</a>
+                <a href="#">天猫移动端</a>
+                <a href="#">天猫移动端</a>
+            </div>
+        </div>
+</section>
+
+</section>
+<section id="contant">
+    <div class="contant-con">
+        <div class="my-map">地图</div>
+        <div class="my-des">
+            <div class="my-computer"></div>
+            <div class="my-resume">
+                <p class="resume-tit">简历</p>
+                <p>我我我我我我我我我</p>
+                <p>我我我我我我我我我</p>
+                <p>我我我我我我我我我</p>
+                <p>我我我我我我我我我</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<!--遮罩层上烟花的效果js-->
+<script src="../js/fireworks.js"></script>
+<!--轮播图js-->
+<script>
+    var target = ["xixi-01","xixi-02","xixi-03","xixi-04","xixi-05","xixi-06","xixi-07"];
+</script>
+<script src="../js/返回顶部.js"></script>
+<script src="../js/lunbo/jquery.js"></script>
+<script src="../js/lunbo/slide.js"></script>
+<script>
+    var oCli=document.getElementById('click');
+    var oLunboNone=document.getElementById('lunbo-none');
+    var oCanvas=document.getElementById('canvas');
+    var oHeaderTrans=document.getElementById('header-trans');
+    oCli.onclick=function(){
+        oLunboNone.style.display='none';
+        oCli.style.display='none';
+        /*oCanvas.style.display='none';*/
+        oHeaderTrans.style.display='none';
+
+    }
+</script>
+<script src="../js/move.js"></script>
+<script src="../js/无缝.js"></script>
+<script src="../js/h5-幻灯片.js"></script>
+<script src="../js/手风琴.js"></script>
+<!--注意，以上三个特效js顺序不能乱-->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
